@@ -29,7 +29,7 @@ export default function Header() {
           <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header className='sticky top-0 border-b　z-10 bg-black'>
+      <header className='sticky top-0 text-gray-200 border-b　z-10 bg-gray-900'>
 
       {openMenu ? (
         <div className='flex flex-row absolute z-10 top-0 right-0  min-h-fit min-w-full'>
@@ -69,7 +69,7 @@ export default function Header() {
               ))}
             </ul>
           </div>
-          <button onClick={menuFunction} className='flex-initial absolute top-4 right-4 md:hidden'>
+          <button onClick={menuFunction} className='flex-initial absolute top-1 right-2 md:hidden'>
             <Image src='/menuicon.png' alt='menu' width={58} height={58} />
           </button>
         </nav>

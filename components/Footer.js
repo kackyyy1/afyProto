@@ -1,13 +1,29 @@
+import Image from 'next/image';
+import Link from 'next/link';
 
-const Footer = () => {
+export default function Footer() {
+
+  const data = [
+    {name:"twitter", route:"/twitter.png", url:"https://twitter.com/aifuyou_band"},
+    {name:"instagram", route:"/instagram.png", url:"https://www.instagram.com/aifuyou_official/"},
+    {name:"youtube", route:"/youtube.png", url:"https://www.youtube.com/channel/UCk1KR3zNDfcmNO8bACgi5fQ"},
+    {name:"apple", route:"/apple-music.png", url:"https://music.apple.com/jp/artist/aifuyou/1547394877"},
+    {name:"spotify", route:"/spotify.png", url:"https://open.spotify.com/artist/4vgtX7t6sWR7xym4onhLBg"},
+  ]
+  
     return (
-      <footer className="sticky top-0 border-b　z-10 bg-black">
+      <footer className="sticky top-0 text-gray-200 border-b　z-10 bg-gray-900 mb-4">
         <div className="max-w-4xl w-full mx-auto h-24 flex items-center justify-center">
-          
-          <h1 className="text-xl font-mono" >© aifuyou</h1>
+          {data.map((value, index) => (
+            <div key={index} className='p-2 block'>
+              <Link href={`${value.url}`}>
+                <Image src={value.route} width="35" height="35" objectFit="cover" />
+              </Link>
+            </div>
+          ))}
+          <p1 className="text-lg m-4 text-center bottom-0 block">© aifuyou</p1>
         </div>
       </footer>
     );
   };
   
-  export default Footer;
