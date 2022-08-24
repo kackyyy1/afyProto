@@ -12,16 +12,16 @@ export default function Footer() {
   ]
   
     return (
-      <footer className="sticky top-0 text-gray-200 border-b　z-10 bg-gray-900 mb-4">
+      <footer className="sticky bottom-0 text-gray-200 border-b　z-10 bg-black">
         <div className="max-w-4xl w-full mx-auto h-24 flex items-center justify-center">
           {data.map((value, index) => (
             <div key={index} className='p-2 block'>
               <Link href={`${value.url}`}>
-                <Image src={value.route} width="35" height="35" objectFit="cover" />
+                <Image src={value.route} width={35} height={35} objectFit="cover" />
               </Link>
             </div>
           ))}
-          <p1 className="text-lg m-4 text-center bottom-0 block">© aifuyou</p1>
+          <p1 className="text-lg ml-4 text-center">© aifuyou</p1>
         </div>
       </footer>
     );

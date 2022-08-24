@@ -23,16 +23,18 @@ export default function Header() {
   return (
     <div>
       <Head>
-        <title>aifuyou | Official Web Site</title>
-          <meta name="description" content="東京出身の5人組、女性ボーカルバンド。 
+      <meta charSet="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>aifuyou | Official Web Site</title>
+      <meta name="description" content="東京出身の5人組、女性ボーカルバンド。 
           アンビエント・シューゲイザー・ポストロックを織り交ぜた、独自の音楽性を展開する。" />
-          <link rel="icon" href="/favicon.ico" />
+      <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header className='sticky top-0 text-gray-200 border-b　z-10 bg-gray-900'>
+      <header className='sticky top-0 text-gray-200 border-b　z-20 bg-black'>
 
       {openMenu ? (
-        <div className='flex flex-row absolute z-10 top-0 right-0  min-h-fit min-w-full'>
+        <div className='flex flex-row absolute z-20 top-0 right-0  min-h-fit min-w-full'>
           <div className='basis-1/2'></div>
 
           <div className='basis-1/2 bg-gray-600'>
@@ -55,7 +57,7 @@ export default function Header() {
           </div>
         </div>
       ) : undefined}
-        <nav>
+        <nav ckassName="z-20">
           <div> 
             <ul className='md:flex max-w-4xl mx-auto hidden justify-between items-center h-20'>
               {data.map((value, index) => (
@@ -69,8 +71,8 @@ export default function Header() {
               ))}
             </ul>
           </div>
-          <button onClick={menuFunction} className='flex-initial absolute top-1 right-2 md:hidden'>
-            <Image src='/menuicon.png' alt='menu' width={58} height={58} />
+          <button onClick={menuFunction} className='flex-initial fixed top-2 right-2 md:hidden'>
+            <Image src='/menuicon.png' alt='menu' width={35} height={35} />
           </button>
         </nav>
       </header>
